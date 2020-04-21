@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nue</title>
+</head>
+<body>
+
+  <div id="app">
+    <button @click="add">+</button>
+    <button @click="subtract" n-show="count > 0">-</button>
+    <p n-text="count"></p>
+  </div>
+
+  <script src="./nue.js"></script>
+  <script>
+    const app = new Nue({
+      el: '#app',
+
+      data: {
+        count: 0
+      },
+
+      methods: {
+        add() {;
+          this.data.count++;
+        },
+
+        subtract() {
+          this.data.count--;
+        }
+      }
+    });
+
+  </script>
+</body>
+</html>
